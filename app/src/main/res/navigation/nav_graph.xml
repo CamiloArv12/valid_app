@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_artist">
+
+     <fragment
+        android:id="@+id/navigation_artist"
+        android:name="com.carevalo.valid_app.ui.artist.ArtistFragment"
+        android:label="@string/title_artist"
+        tools:layout="@layout/fragment_artist" >
+         <action
+             android:id="@+id/action_navigation_artist_to_navigation_info"
+             app:destination="@id/navigation_info" />
+     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_info"
+        android:name="com.carevalo.valid_app.ui.Information.InfoFragment"
+        android:label="@string/title_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_navigation_info_to_navigation_artist"
+            app:destination="@id/navigation_artist" />
+    </fragment>
+
+
+</navigation>
